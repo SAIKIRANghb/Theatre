@@ -1,0 +1,75 @@
+.theatre-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  padding: 20px;
+  height: 100vh;
+  margin: auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #301e1e4d;
+  border: 1px solid #ff8902;
+}
+
+.theatre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.theatre-card {
+  background-color: black;
+  border: 1px solid #ff8902;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 55vh;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theatre-card:hover {
+  transform: scale(0.99);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theatre-card-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.theatre-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  box-shadow: 2px 2px 15px 2px #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.theatre-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+}
+
+.theatre-card-content h2 {
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.theatre-card-content p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}

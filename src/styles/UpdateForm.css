@@ -1,0 +1,87 @@
+.generalized-update-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    /* animation: slideIn 0.5s ease-out; */
+  }
+  
+  .generalized-update-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ec6b0f;
+    text-align: center;
+  }
+  
+  .generalized-update-form form div {
+    margin-bottom: 15px;
+  }
+  
+  .generalized-update-form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ec6b0f;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .generalized-update-form input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    /* background-color: #2c2c2c; */
+    background-color: #ffffff;
+
+    color: #000000;
+    font-size: 14px;
+  }
+  
+  .generalized-update-form input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .generalized-update-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ec6b0f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .generalized-update-form button:hover {
+    background-color: #d85a00;
+  }
+  
+  .generalized-update-form .error {
+    color: #ff4d4d;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .generalized-update-form {
+      padding: 20px;
+    }
+  
+    .generalized-update-form h1 {
+      font-size: 20px;
+    }
+  
+    .generalized-update-form input, .generalized-update-form button {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+#Body {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poppins', Arial, sans-serif;
+  justify-content: center;
+  align-items: flex-start; /* Align tracker and content at the top */
+  gap: 25px;
+  padding-top: 20px; /* Ensure some space at the top */
+}
+
+.tracker {
+  width: 15%;
+  padding: 20px;
+  background: rgba(236, 107, 15, 1);
+  position: sticky;
+  top: 180px; /* Stick to 20px from the top */
+  height: auto;
+  max-height: 500px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: auto; /* Add overflow for longer content */
+}
+
+.Thcontent {
+  width: 75vw;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  overflow-y: auto;
+  height: 80vh;
+  margin-top: 0; /* Align the content's top with tracker */
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 80px 20px 20px;
+  margin-top: 30px;
+}
+
+.card-link{
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+  padding:10px;
+  background-color:rgba(236, 107, 15, 0.8);
+  border-radius:10px;
+  color:white;
+}
+.tracker h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tracker p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.filter-group select, .filter-group input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(5, 5, 5);
+}
+
+/* Scrollable content for movies */
+/* .content {
+  width: 75vw;
+  padding: 20px;
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  overflow-y: auto;
+  height: 80vh;
+} */
+.box {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 1rem;
+}
+
+.box img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Box color variations */
+.box1 { background-color: rgba(255, 99, 71, 0.6); height: 230px;}
+.box2 { background-color: rgba(30, 144, 255, 0.6); }
+.box3 { background-color: rgba(60, 179, 113, 0.6); }
+.box4 { background-color: rgba(255, 215, 0, 0.6); }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* .tracker {
+    display: none;
+  } */
+  .tracker{
+    display: flex;
+    height: 15%;
+    width: 100%;
+    top: 100px;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    border-radius: 5px 5px 0 0;
+    gap: 15px;
+  }
+  .tracker input{
+    width: 10%;
+  }
+  .Thcontent {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  #Body{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1306px){
+  .Thcontent {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+

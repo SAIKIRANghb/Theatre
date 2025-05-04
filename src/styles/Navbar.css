@@ -1,0 +1,262 @@
+
+.navbar-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 20;
+}
+
+.navbar.sticky {
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .hamburger {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 5px;
+}
+
+.navbar .hamburger div {
+width: 30px;
+height: 3px;
+background: #fff;
+border-radius: 3px;
+transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar .hamburger.active div:nth-child(1) {
+transform: rotate(45deg) translateY(8px);
+}
+
+.navbar .hamburger.active div:nth-child(2) {
+opacity: 0;
+}
+
+.navbar .hamburger.active div:nth-child(3) {
+transform: rotate(-45deg) translateY(-8px);
+}
+
+
+.navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+  background: rgba(236, 107, 15, 0.8);
+  color: #fff;
+}
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .search-bar input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 15vw;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .search-bar input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .profile #profilePic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: none;
+  object-fit: cover;
+}
+
+.navbar .profile #userButton {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(83, 38, 38, 0.808);
+  transition: background 0.3s ease;
+}
+
+.navbar .profile #userButton:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .profile .dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 1001;
+  top: 60px;
+  right: 0;
+}
+
+.dropdown-content {
+    display: none;
+  }
+  
+.dropdown-content.show {
+    display: block;
+}
+
+  
+.navbar .profile:hover .dropdown-content {
+  display: block;
+  animation: slideIn 0.3s forwards;
+}
+
+.navbar .profile .dropdown-content a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .profile .dropdown-content a:hover {
+  background: rgba(236, 107, 15, 0.8);
+}
+
+.navbar .menu .master {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.navbar .menu .master:hover {
+  background: rgba(236, 107, 15, 0.8);
+  color: #fff;
+}
+
+.navbar .menu .dropdown {
+  position: relative;
+}
+
+.navbar .menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px 0;
+  z-index: 1001;
+  top: 100%;
+  left: 0;
+}
+
+.navbar .menu .dropdown:hover .dropdown-content {
+  display: block;
+  animation: slideIn 0.3s forwards;
+}
+
+.navbar .menu .dropdown-content a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .menu .dropdown-content a:hover {
+  background: rgba(236, 107, 15, 0.8);
+}
+
+@media (max-width: 768px) {
+  .navbar .search-bar {
+    display: flex;
+  }
+
+  .navbar .search-bar input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar .profile {
+    display: none;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+    z-index: 11;
+  }
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    /* padding: 100px 0; */
+    padding-top: 70px;
+    z-index: 10;
+    animation: slideIn 0.3s forwards;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navbar .menu .master {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 95vw;
+  }
+  .search-bar{
+    width: 30vw;
+  }
+    .dropdown{
+    display: flex;
+  }
+  .dropdown-content{
+    width: 105vw;
+  }
+}
